@@ -1,0 +1,11 @@
+candidates,n_clocks,sites,rmse_mm,end_mm,worst_mm
+candidate sites,2,Samdrup Jongkhar BM (km 0); Phuntsholing BM (km 819),41.822799793950644,12.779559503583712,58.91471917268629
+candidate sites,3,Samdrup Jongkhar BM (km 0); Pelela Pass BM (km 543); Phuntsholing BM (km 819),24.773054681982998,12.77955558031956,32.01018288941403
+candidate sites,4,Samdrup Jongkhar BM (km 0); Mongar BM (km 257); Pelela Pass BM (km 543); Phuntsholing BM (km 819),21.10269147523493,12.712026373900338,26.184278501508253
+candidate sites,5,Samdrup Jongkhar BM (km 0); Mongar BM (km 257); Ura Junction (km 394); Pelela Pass BM (km 543); Phuntsholing BM (km 819),19.590740709853087,12.711396166204523,25.903393417087315
+candidate sites,6,Samdrup Jongkhar BM (km 0); Mongar BM (km 257); Ura Junction (km 394); Pelela Pass BM (km 543); Changangkha Zero Order Point (km 667); Phuntsholing BM (km 819),18.361034444893647,12.624863846314431,24.582068739731294
+any benchmark,2,Samdrup Jongkhar BM (km 0); Phuntsholing BM (km 819),41.822799793950644,12.779559503583712,58.91471917268629
+any benchmark,3,Samdrup Jongkhar BM (km 0); Yotongla Pass BM (km 451); Phuntsholing BM (km 819),24.242418044933466,12.77711662143221,30.260792867576143
+any benchmark,4,Samdrup Jongkhar BM (km 0); B?M RC42 (km 253); Yotongla Pass BM (km 451); Phuntsholing BM (km 819),21.785733088237293,12.718754312243766,29.54121200343429
+any benchmark,5,Samdrup Jongkhar BM (km 0); B?M RC42 (km 253); Yotongla Pass BM (km 451); Dochula Pass BM (km 643); Phuntsholing BM (km 819),19.370960431913897,12.654765830812465,25.37847789450683
+any benchmark,6,Samdrup Jongkhar BM (km 0); B?M near Bapthung lhakhang (km 104); B?M RC42 (km 253); Yotongla Pass BM (km 451); Dochula Pass BM (km 643); Phuntsholing BM (km 819),18.211068230332305,12.449228256845917,24.395674601860055

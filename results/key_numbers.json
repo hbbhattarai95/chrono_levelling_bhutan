@@ -1,0 +1,10 @@
+{
+ "delta (mm/sqrt km)": "2.53 (2.35-2.70); truncated 2.78",
+ "Conventional: RMSE / worst (mm)": "51.5 / 72.3",
+ "Case 1, 1e-18, random: RMSE / worst": "30.9 / 36.7",
+ "Case 3, 1e-18, random: RMSE / worst": "23.3 / 29.2",
+ "Case 1, 1e-18, systematic: worst": "58.9",
+ "Case 3, 1e-18, systematic: worst": "32.7",
+ "Spacing rule max |difference| (mm)": "1.18",
+ "1e-18 comparison = km of levelling": "26"
+}

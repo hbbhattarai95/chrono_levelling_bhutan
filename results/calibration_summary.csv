@@ -1,0 +1,12 @@
+,value
+delta (mm/sqrt km),2.525
+95% bootstrap interval,2.35 - 2.70
+"delta, truncated normal",2.775
+tolerance (mm/sqrt km),11.999999999999998
+largest misclosure / tolerance,0.982
+F+B misclosure RMS / max (mm),8.59 / 29.0
+temperature model,"10.00 ppm/degC x (T - 10.00 degC), max residual 0.00 ppm"
+sum |temperature correction| (m),2.657
+cumulative correction max (mm),203.2
+cumulative correction at Phuntsholing BM (mm),-255.1
+conventional s.d. at Phuntsholing BM (mm),72.4
