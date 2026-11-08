@@ -1,9 +1,38 @@
-"""Map helpers: Bhutan National Grid (TM, 90E, k0 = 1, FE 250000) and boundary reading."""
+"""Map utilities for Bhutan National Grid (Transverse Mercator, central meridian
+90°E, scale factor 1, and false easting 250,000 m) and boundary-file reading.
+"""
+
 import json, struct
 import numpy as np
 
 
 def tm_forward(lon, lat, lon0=90.0, k0=1.0, fe=250000.0, a=6378137.0, f=1 / 298.257222101):
+    """Convert longitude and latitude to projected coordinates using the
+    Transverse Mercator projection.
+
+    The default parameters define the Bhutan National Grid. The calculation
+    uses the ellipsoidal Transverse Mercator series expansion.
+
+    Parameters
+    ----------
+    lon, lat : array-like or float
+        Geographic longitude and latitude in decimal degrees.
+    lon0 : float
+        Longitude of the central meridian, in degrees.
+    k0 : float
+        Scale factor at the central meridian.
+    fe : float
+        False easting, in metres.
+    a : float
+        Semi-major axis of the reference ellipsoid, in metres.
+    f : float
+        Flattening of the reference ellipsoid.
+
+    Returns
+    -------
+    x, y : array-like or float
+        Projected easting and northing coordinates, in metres.
+    """
     e2 = f * (2 - f); ep2 = e2 / (1 - e2)
     phi = np.radians(lat); dl = np.radians(np.asarray(lon) - lon0)
     N = a / np.sqrt(1 - e2 * np.sin(phi) ** 2); T = np.tan(phi) ** 2
@@ -19,7 +48,25 @@ def tm_forward(lon, lat, lon0=90.0, k0=1.0, fe=250000.0, a=6378137.0, f=1 / 298.
 
 
 def read_boundary(path):
-    """Read a polygon boundary (.shp or .geojson) and return rings in Bhutan National Grid (m)."""
+    """Read polygon boundaries from a shapefile or GeoJSON file.
+
+    Extract the polygon rings and return their coordinates in Bhutan
+    National Grid (metres). Geographic coordinates are projected using
+    the Transverse Mercator transformation defined in tm_forward().
+    Coordinates that are already projected are retained unchanged.
+
+    Parameters
+    ----------
+    path : str
+        Path to the input .shp or .geojson boundary file.
+
+    Returns
+    -------
+    out : list of numpy.ndarray
+        A list containing the coordinate arrays for each polygon ring.
+        Each array contains projected easting and northing coordinates
+        in metres.
+    """
     rings = []
     if path.lower().endswith(".shp"):
         d = open(path, "rb").read(); pos = 100
